@@ -1,0 +1,197 @@
+@font-face {
+  font-family: "Gotham-Bold";
+  src: url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.eot");
+  src: url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.otf") format("otf"), url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.svg") format("svg"), url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.ttf") format("ttf"), url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "GothamBook";
+  src: url("https://frontend-assets.dnc.org/fonts/GothamBook.eot");
+  src: url("https://frontend-assets.dnc.org/fonts/GothamRounded-Book.otf") format("otf"), url("https://frontend-assets.dnc.org/fonts/GothamBook.ttf") format("ttf"), url("https://frontend-assets.dnc.org/fonts/GothamBook.svg") format("svg"), url("https://frontend-assets.dnc.org/fonts/GothamBook.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.pure-button {
+  border-radius: 0;
+  background-color: #FFDD00;
+  color: #0F2446; }
+  .pure-button:hover, .pure-button:focus {
+    background-image: none;
+    background-color: #0F2446;
+    color: #FFDD00;
+    transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease; }
+
+/* Usage: easily set breakpoints for small, medium, and large screens
+Either pass the px number through individually, or set it as a variable */
+.pure-g > div[class*="pure-u-"] {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 0.5em 1em; }
+  .pure-g > div[class*="pure-u-"] input {
+    width: 100%;
+    line-height: 1;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: 2.5em; }
+
+.pure-g > form > div[class*="pure-u-"] > div {
+  padding: 0.5em 1em; }
+
+#header {
+  padding: 1em; }
+
+#main .main-body {
+  padding: 1em 3em; }
+
+#footer {
+  padding: 1em; }
+
+.pure-button {
+  border-radius: 0;
+  background-color: #FFDD00;
+  color: #0F2446; }
+  .pure-button:hover, .pure-button:focus {
+    background-image: none;
+    background-color: #0F2446;
+    color: #FFDD00;
+    transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease; }
+
+/* Usage: easily set breakpoints for small, medium, and large screens
+Either pass the px number through individually, or set it as a variable */
+.pure-button {
+  border-radius: 0;
+  background-color: #FFDD00;
+  color: #0F2446; }
+  .pure-button:hover, .pure-button:focus {
+    background-image: none;
+    background-color: #0F2446;
+    color: #FFDD00;
+    transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease; }
+
+/* Usage: easily set breakpoints for small, medium, and large screens
+Either pass the px number through individually, or set it as a variable */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%; }
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+#wrapper {
+  min-height: 100%;
+  position: relative; }
+
+#header {
+  background: #0F2446;
+  color: #FFDD00;
+  text-align: center; }
+  #header h1, #header h2, #header h3, #header h4, #header h5 {
+    background: #0F2446;
+    color: #FFDD00; }
+
+/* fix for IE and Firefox responsiveness */
+.pure-g {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap; }
+
+.pure-g [class*="pure-u"] {
+  font-family: "Lato", sans-serif; }
+
+.pure-g {
+  font-family: "Lato", sans-serif; }
+
+.signup-form {
+  background: #E31818; }
+  .signup-form .grid-content {
+    background: #E31818;
+    color: #000; }
+    .signup-form .grid-content .pure-button {
+      background: #000;
+      color: #fff; }
+      .signup-form .grid-content .pure-button:hover {
+        transition: all 0.7s ease;
+        -webkit-transition: all 0.7s ease;
+        -moz-transition: all 0.7s ease;
+        -o-transition: all 0.7s ease;
+        background: #fff;
+        color: #000; }
+
+.signup-form {
+  padding: 1em; }
+  .signup-form input {
+    width: 100%;
+    line-height: 1;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: 2.5em; }
+  .signup-form .pure-button {
+    text-transform: uppercase;
+    font-weight: bold; }
+
+.social-share {
+  width: 100%;
+  display: inline-block; }
+  .social-share i {
+    font-size: 1.5em; }
+  .social-share .fa-twitter {
+    margin-left: 1em; }
+
+#footer {
+  background: #0F2446;
+  color: #FFDD00;
+  text-align: center;
+  clear: both;
+  width: 100%; }
+  #footer a {
+    color: #00AEF3;
+    text-decoration: none; }
+    #footer a:hover {
+      color: #E31818; }
+  #footer .copyright-footer {
+    border: 1px solid #FFDD00; }
+    #footer .copyright-footer .copyright-text {
+      padding: 1em; }
+      #footer .copyright-footer .copyright-text p {
+        margin: 0; }
+
+h1, h2, h3, h4, h5 {
+  font-family: "Gotham A", "Gotham B", sans-serif;
+  color: #0F2446; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 14pt;
+  color: #0F2446; }
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #00AEF3;
+  transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease; }
+  a:hover, a:active, a:focus {
+    color: #0F2446; }

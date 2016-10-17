@@ -1,0 +1,22 @@
+//Default Fonts
+h1, h2, h3, h4, h5 {
+	font-family: $header-font;
+	color: $theme_heading;
+}
+body {
+	font-family: $body-font;
+	font-size: 14pt;
+	color: $theme_body;
+}
+
+//Links
+a {
+	font-weight: bold;
+	text-decoration: none;
+	color: $theme_body_link;
+	@include transition;
+	&:hover, &:active, &:focus {
+		color: $theme_body_link_hover;
+	}
+}
+

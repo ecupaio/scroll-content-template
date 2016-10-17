@@ -1,0 +1,84 @@
+@import "mixins";
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+	width: 100%;
+}
+* {
+	@include border-box; 
+}
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+//Header
+#header {
+	@include header_colors;
+	text-align: center;
+	
+	h1, h2, h3, h4, h5 {
+		@include header_colors;
+	}
+}
+//PureCSS Grids
+/* fix for IE and Firefox responsiveness */
+.pure-g {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+.pure-g [class *= "pure-u"] {
+	font-family: $body-font;
+}
+.pure-g {
+	font-family: $body-font;
+}
+//BSD Form
+@include form_colors;
+.signup-form {
+	padding: 1em;
+	@include input;
+	.pure-button {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+}
+//Social Share
+.social-share {
+	width: 100%;
+	display: inline-block;
+	i {
+		font-size: 1.5em;
+	}
+	.fa-twitter {
+		margin-left: 1em;
+	}
+}
+//Footer
+#footer {
+	@include footer_colors;
+	text-align: center;
+	clear: both;
+	width: 100%;
+	a {
+	    color: $copyright_link;
+	    text-decoration: none;
+	    &:hover {
+	      color: $copyright_link_hover;
+	    } 
+  	}
+	.copyright-footer {
+		border: 1px solid $theme_footer_txt;
+		.copyright-text {
+			padding: 1em;
+			p {
+				margin: 0;
+			}
+		}
+	}
+}
