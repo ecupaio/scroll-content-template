@@ -42,11 +42,22 @@
 <body>
     <div id="wrapper">
         <div id="header">
-            <h1> Header</h1>
+            <div class="current-section">
+            </div>
+            <div class="site-title">
+                <h1> Header</h1>
+            </div>
         </div>
         <div id="main">
             <div class="main-body">
-                <p>Use the templates in the content_templates to get started on building your new site.</p>
+                <div class="content-section" data-section="1">
+                    <h1 class="section-header">Content Header</h1>
+                    <p>content</p>
+                </div>
+                <div class="content-section" data-section="2">
+                    <h1 class="section-header">Content Header</h1>
+                    <p>content</p>
+                </div>
             </div>
         </div>
     </div>

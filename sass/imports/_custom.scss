@@ -36,8 +36,8 @@ $size-medium: 768px;
 $size-small: 568px;
 //Padding for Sections and Grids
 $gutter-padding: 0.5em 1em;
-$header-padding: 1em;
-$body-padding: 1em 3em;
+$header-padding: 0.5em;
+$body-padding: 0;
 $footer-padding: 1em;
 @import "mixins";
 @include gridGutters($gutter-padding);	
@@ -45,3 +45,11 @@ $footer-padding: 1em;
 @include bodyPadding($body-padding);
 @include footerPadding($footer-padding);
 //Start Theme Customizations below: 
+.content-section {
+	height: 100vh;
+}
+[data-section] {
+	&:nth-child(1)  {
+		background: $brand_lt_blue;
+	}
+}
