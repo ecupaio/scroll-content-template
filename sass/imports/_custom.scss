@@ -44,12 +44,40 @@ $footer-padding: 1em;
 @include headerPadding($header-padding);
 @include bodyPadding($body-padding);
 @include footerPadding($footer-padding);
-//Start Theme Customizations below: 
+//Start Theme Customizations below:
+#header {
+	position:fixed;
+	top: 0;
+	width: 100%;
+}
+.current-section {
+	display: none;
+} 
+#main {
+	margin-top: 3em;
+}
+.main-body {
+	position: relative;
+}
+#scroller {
+	position: fixed;
+	right: 1em;
+	top: 50%;
+	transform: translateY(-50%);
+	.quick-jump {
+		text-align: center;
+		.quick-jump-item {
+			opacity: 0.5;
+			@include transition;
+			&.active {
+				opacity: 1;
+			}
+		}
+	}
+}
 .content-section {
 	height: 100vh;
 }
-[data-section] {
-	&:nth-child(1)  {
-		background: $brand_lt_blue;
-	}
+.content-section[data-section]:nth-child(1) {
+	background: $brand_lt_blue;
 }
