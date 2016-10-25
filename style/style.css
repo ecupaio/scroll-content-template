@@ -55,13 +55,14 @@ Either pass the px number through individually, or set it as a variable */
 #header {
   position: fixed;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: 999; }
 
 .current-section {
   display: none; }
 
 #main {
-  margin-top: 3em; }
+  margin-top: 2em; }
 
 .main-body {
   position: relative; }
@@ -84,9 +85,16 @@ Either pass the px number through individually, or set it as a variable */
 
 .content-section {
   height: 100vh; }
+  .content-section .inner-section {
+    padding: 1em; }
 
-.content-section[data-section]:nth-child(1) {
-  background: #00AEF3; }
+.content-section[data-section]:nth-child(odd) {
+  background: #00AEF3;
+  color: #fff; }
+
+.content-section[data-section]:nth-child(even) {
+  background: #fff;
+  color: #00AEF3; }
 
 .pure-button {
   border-radius: 0;

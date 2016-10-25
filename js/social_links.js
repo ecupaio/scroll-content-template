@@ -9,6 +9,6 @@ $(document).ready(function (){
 function share(url, title, descr, image, winWidth, winHeight) {
     var winTop = (screen.height / 2) - (winHeight / 2);
     var winLeft = (screen.width / 2) - (winWidth / 2);
-    var app_id = "123142237735444";
+    var app_id = "1600385656930377";
     window.open('https://www.facebook.com/dialog/share?href=' + url + '&app_id=' + app_id, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
 }
