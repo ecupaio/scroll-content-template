@@ -7,17 +7,7 @@ $(document).ready(function() {
             scrollNext();
         }
     });
-    $('body,html').on('mousewheel', function(event, delta) {
-        if ($('body,html').is(':animated')) {
-            return false;
-        }
-        if (delta < 0) {
-            scrollNext();
-        }
-        if (delta > 0) {
-            scrollPrev();
-        }
-    });
+    
 
     function scrollNext() {
         $('body,html').animate({
