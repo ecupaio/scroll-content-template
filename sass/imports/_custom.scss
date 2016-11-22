@@ -6,7 +6,6 @@
 //$brand_red
 //$brand_yellow
 //$brand_gray
-
 //Theme Colors
 //Use the brand colors for your theme colors
 //Body and Heading text Colors
@@ -16,12 +15,12 @@ $theme_body_link_hover: $brand_dk_blue;
 $theme_heading: $brand_dk_blue;
 //Footer Colors
 $theme_footer_bg: $brand_dk_blue;
-$theme_footer_txt: $brand_yellow; 
+$theme_footer_txt: $brand_yellow;
 $copyright_link: $brand_lt_blue;
 $copyright_link_hover: $brand_red;
 //Header Colors
 $theme_header_bg: $brand_dk_blue;
-$theme_header_txt: $brand_yellow; 
+$theme_header_txt: $brand_yellow;
 //Button Colors
 $theme_button_bg: $brand_yellow;
 $theme_button_txt: $brand_dk_blue;
@@ -40,53 +39,153 @@ $header-padding: 0.5em;
 $body-padding: 0;
 $footer-padding: 1em;
 @import "mixins";
-@include gridGutters($gutter-padding);	
+@include gridGutters($gutter-padding);
 @include headerPadding($header-padding);
 @include bodyPadding($body-padding);
 @include footerPadding($footer-padding);
 //Start Theme Customizations below:
 #header {
-	position:fixed;
-	top: 0;
-	width: 100%;
-	z-index: 999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
 }
+
 .current-section {
-	display: none;
-} 
+    display: none;
+    .active {
+    	display: inline-block;
+    }
+}
+
 #main {
-	margin-top: 2em;
+    margin-top: 4.37em;
 }
+
 .main-body {
-	position: relative;
+    position: relative;
 }
+
+//Scroller 
 #scroller {
-	position: fixed;
-	right: 1em;
-	top: 50%;
-	transform: translateY(-50%);
-	.quick-jump {
-		text-align: center;
-		.quick-jump-item {
-			opacity: 0.5;
-			@include transition;
-			&.active {
-				opacity: 1;
-			}
-		}
-	}
+    position: fixed;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    @include transition;
+    .quick-jump {
+        text-align: center;
+        .quick-jump-item {
+            opacity: 0.5;
+            @include transition;
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+    .scroll-btn {
+        opacity: 1;
+        @include transition;
+        &:hover {
+            cursor: pointer;
+        }
+        &.hidden {
+            opacity: 0;
+        }
+    }
 }
+
+//Menu Toggle
+#nav-container {
+    text-align: left;
+}
+.menu-toggle {
+    width: 2.5em;
+    padding: 0.5em 0.25em;
+    display: inline-block;
+    .toggle-line {
+        width: 100%;
+        background-color: $theme_header_txt;
+        height: 0.25em;
+        margin: 0.25em 0;
+        @include transition;
+        &.open {
+            &:nth-child(2) {
+                transform:  scale(0);
+                -webkit-transform-origin: center center;
+        		-moz-transform-origin: center center;
+        		transform-origin: center center;
+                
+            }
+            &:nth-child(1) {
+                transform: translate(0,0.5em) rotate(45deg);
+                
+            }
+            &:nth-child(3) {
+                transform: translate(0,-0.5em) rotate(-45deg) ;
+                
+            }
+        }
+    }
+}
+
+//Sidebar Menu 
+#sidebar-menu {
+    width: 0;
+    background: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 1em;
+    transition: width 0.7s ease;
+    -webkit-transition: width 0.7s ease;
+    -moz-transition: width 0.7s ease;
+    @include border-box;
+    &.open {
+        width: 10em;
+        
+        
+    }
+    .menu-items {
+    	overflow-x: hidden;
+    	white-space: nowrap;
+    	.menu-item {
+    		margin: 0.5em 0;
+    		@include transition;
+    		&:hover {
+    			color: $brand_lt_blue;
+    			cursor: pointer;
+    		}
+    	}
+    }
+}
+
+#wrapper,
+#footer {
+    margin-left: 0em;
+    @include transition;
+    &.open {
+        margin-left: 10em;
+    }
+}
+
 .content-section {
-	height: 100vh;
-	.inner-section {
-		padding: 1em;
-	}
+    height: 100vh;
+    .inner-section {
+        padding: 1em;
+    }
 }
+
 .content-section[data-section]:nth-child(odd) {
-	background: $brand_lt_blue;
-	color: $brand_white;
+    background: $brand_lt_blue;
+    color: $brand_white;
 }
+
 .content-section[data-section]:nth-child(even) {
-	background: $brand_white;
-	color: $brand_lt_blue;
+    background: $brand_white;
+    color: $brand_lt_blue;
 }
