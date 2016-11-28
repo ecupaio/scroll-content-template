@@ -15,7 +15,6 @@ $(document).ready(function() {
         }
     });
 
-
     function scrollNext() {
         if ($(".content-section.active").next().is(".content-section")) {
             $('body,html').animate({
@@ -23,8 +22,6 @@ $(document).ready(function() {
             }, '1000', 'swing');
             console.log(nextSection);
         }
-
-
     }
 
     function scrollPrev() {
@@ -35,16 +32,12 @@ $(document).ready(function() {
         }
     }
 
-
     function scrollDirect() {
         $('body,html').animate({
             scrollTop: $('.content-section[data-section="' + sectionData + '"]').offset().top - 77
         }, '1000', 'swing');
+        console.log(sectionData);
     }
-
-    
-
-
 
     $('.content-section').each(function(index, obj) {
         sectionIndex = index + 1;
@@ -53,8 +46,11 @@ $(document).ready(function() {
         $(this).attr('data-section', sectionIndex);
     });
     //Sidebar Menu 
+    function toggleNav() {
+        $('#sidebar-menu, .menu-toggle, .toggle-line, #header').toggleClass('open');
+    }
     $('.menu-toggle').click(function() {
-        $('#sidebar-menu, .menu-toggle, .toggle-line, #wrapper, #footer').toggleClass('open');
+        toggleNav();
     });
     var menuItem;
     $('.section-header').each(function(index, obj) {
@@ -63,21 +59,21 @@ $(document).ready(function() {
         $(".menu-items").append('<div class="menu-item" data-section="' + sectionIndex + '">'+menuItem+'</div>');
     });   
     $('.menu-item').click(function(){
+        toggleNav();
         sectionData = $(this).data('section');
-        $('#sidebar-menu, .menu-toggle, .toggle-line, #wrapper, #footer').toggleClass('open');
         scrollDirect();
     });
     
-
 
     $('.quick-jump-item').click(function() {
         sectionData = $(this).data('section');
         scrollDirect();
     });
+
     $(window).scroll(function() {
         var scrollTop = $(window).scrollTop();
         $('.content-section').each(function() {
-            var contentTop = $(this).offset().top
+            var contentTop = $(this).offset().top;
             sectionData = $(this).data('section');
             var contentHeader = $(this).find('.section-header').text();
             if (contentTop - scrollTop < 100) {

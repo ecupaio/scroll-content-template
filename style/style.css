@@ -60,8 +60,10 @@ Either pass the px number through individually, or set it as a variable */
 
 .current-section {
   display: none; }
-  .current-section .active {
-    display: inline-block; }
+  .current-section.active {
+    display: inline-block;
+    float: left;
+    padding: 0.75em; }
 
 #main {
   margin-top: 4.37em; }
@@ -107,7 +109,8 @@ Either pass the px number through individually, or set it as a variable */
 .menu-toggle {
   width: 2.5em;
   padding: 0.5em 0.25em;
-  display: inline-block; }
+  display: inline-block;
+  float: left; }
   .menu-toggle .toggle-line {
     width: 100%;
     background-color: #FFDD00;
@@ -135,18 +138,25 @@ Either pass the px number through individually, or set it as a variable */
   top: 0;
   left: 0;
   height: 100%;
-  padding: 1em;
-  transition: width 0.7s ease;
-  -webkit-transition: width 0.7s ease;
-  -moz-transition: width 0.7s ease;
+  z-index: 999;
+  padding: 1em 0;
+  transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box; }
   #sidebar-menu.open {
-    width: 10em; }
+    width: 10em;
+    padding: 1em; }
   #sidebar-menu .menu-items {
     overflow-x: hidden;
-    white-space: nowrap; }
+    white-space: nowrap;
+    transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease; }
     #sidebar-menu .menu-items .menu-item {
       margin: 0.5em 0;
       transition: all 0.7s ease;
@@ -157,19 +167,17 @@ Either pass the px number through individually, or set it as a variable */
         color: #00AEF3;
         cursor: pointer; }
 
-#wrapper,
-#footer {
+#header {
   margin-left: 0em;
   transition: all 0.7s ease;
   -webkit-transition: all 0.7s ease;
   -moz-transition: all 0.7s ease;
   -o-transition: all 0.7s ease; }
-  #wrapper.open,
-  #footer.open {
+  #header.open {
     margin-left: 10em; }
 
 .content-section {
-  height: 100vh; }
+  min-height: 100vh; }
   .content-section .inner-section {
     padding: 1em; }
 
@@ -180,6 +188,10 @@ Either pass the px number through individually, or set it as a variable */
 .content-section[data-section]:nth-child(even) {
   background: #fff;
   color: #00AEF3; }
+
+@media screen and (768px) {
+  .current-section.active {
+    display: none; } }
 
 .pure-button {
   border-radius: 0;

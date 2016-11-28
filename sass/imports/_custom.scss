@@ -30,7 +30,7 @@ $theme_form_txt: $brand_black;
 $theme_form_btn_bg: $brand_black;
 $theme_form_btn_txt: $brand_white;
 //Mobile Breakpoints
-$size-largee: 1024px;
+$size-large: 1024px;
 $size-medium: 768px;
 $size-small: 568px;
 //Padding for Sections and Grids
@@ -53,8 +53,10 @@ $footer-padding: 1em;
 
 .current-section {
     display: none;
-    .active {
+    &.active {
     	display: inline-block;
+        float: left;
+        padding: 0.75em;
     }
 }
 
@@ -105,6 +107,7 @@ $footer-padding: 1em;
     width: 2.5em;
     padding: 0.5em 0.25em;
     display: inline-block;
+    float: left;
     .toggle-line {
         width: 100%;
         background-color: $theme_header_txt;
@@ -140,19 +143,18 @@ $footer-padding: 1em;
     top: 0;
     left: 0;
     height: 100%;
-    padding: 1em;
-    transition: width 0.7s ease;
-    -webkit-transition: width 0.7s ease;
-    -moz-transition: width 0.7s ease;
+    z-index: 999;
+    padding: 1em 0;
+    @include transition;
     @include border-box;
     &.open {
         width: 10em;
-        
-        
+        padding: 1em;
     }
     .menu-items {
     	overflow-x: hidden;
     	white-space: nowrap;
+        @include transition;
     	.menu-item {
     		margin: 0.5em 0;
     		@include transition;
@@ -164,8 +166,9 @@ $footer-padding: 1em;
     }
 }
 
-#wrapper,
-#footer {
+
+#header
+ {
     margin-left: 0em;
     @include transition;
     &.open {
@@ -174,7 +177,7 @@ $footer-padding: 1em;
 }
 
 .content-section {
-    height: 100vh;
+    min-height: 100vh;
     .inner-section {
         padding: 1em;
     }
@@ -188,4 +191,12 @@ $footer-padding: 1em;
 .content-section[data-section]:nth-child(even) {
     background: $brand_white;
     color: $brand_lt_blue;
+}
+@media screen and ($size-medium) {
+    .current-section {
+        &.active {
+            display: none;    
+        }
+        
+    }
 }
