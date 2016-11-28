@@ -6,6 +6,12 @@ $transition_type: all .7s ease;
 	-moz-transition: $transition_type;
 	-o-transition: $transition_type;
 }
+@mixin custom_transition($transition...) {
+	transition: $transition;
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+}
 //Theme Color Mixins
 @mixin header_colors {
 	background: $theme_header_bg;

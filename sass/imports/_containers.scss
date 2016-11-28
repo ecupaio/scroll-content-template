@@ -64,7 +64,7 @@ body {
 	@include footer_colors;
 	text-align: center;
 	clear: both;
-	width: 100%;
+	position: relative;
 	a {
 	    color: $copyright_link;
 	    text-decoration: none;
