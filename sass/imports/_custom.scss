@@ -192,11 +192,8 @@ $footer-padding: 1em;
     background: $brand_white;
     color: $brand_lt_blue;
 }
-@media screen and ($size-medium) {
-    .current-section {
-        &.active {
-            display: none;    
-        }
-        
+@media screen and (max-width: $size-medium) {
+    .current-section.active {
+        display: none; 
     }
 }

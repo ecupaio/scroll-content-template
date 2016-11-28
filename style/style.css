@@ -189,7 +189,7 @@ Either pass the px number through individually, or set it as a variable */
   background: #fff;
   color: #00AEF3; }
 
-@media screen and (768px) {
+@media screen and (max-width: 768px) {
   .current-section.active {
     display: none; } }
 
