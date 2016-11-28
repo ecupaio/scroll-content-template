@@ -108,6 +108,9 @@ $footer-padding: 1em;
     padding: 0.5em 0.25em;
     display: inline-block;
     float: left;
+    &:hover {
+        cursor: pointer;
+    }
     .toggle-line {
         width: 100%;
         background-color: $theme_header_txt;

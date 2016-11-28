@@ -111,6 +111,8 @@ Either pass the px number through individually, or set it as a variable */
   padding: 0.5em 0.25em;
   display: inline-block;
   float: left; }
+  .menu-toggle:hover {
+    cursor: pointer; }
   .menu-toggle .toggle-line {
     width: 100%;
     background-color: #FFDD00;

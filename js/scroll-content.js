@@ -63,6 +63,11 @@ $(document).ready(function() {
         sectionData = $(this).data('section');
         scrollDirect();
     });
+    $('#wrapper, #header, #footer').click(function(){
+        if ($('#sidebar-menu').width() > 0) {
+            $('#sidebar-menu, .menu-toggle, .toggle-line, #header').removeClass('open');
+        }
+    });
     
 
     $('.quick-jump-item').click(function() {
